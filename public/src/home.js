@@ -71,7 +71,8 @@ function getMostPopularAuthors(books, authors) {
         amount += book.borrows.length
       }
     }
-    topAuthors.push({ name: names, count: amount })
+    const authorProfile = { name: names, count: amount }
+    topAuthors.push(authorProfile);
   }
   return topRated(topAuthors)
 }
